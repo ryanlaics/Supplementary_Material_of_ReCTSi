@@ -1,3 +1,27 @@
+Review:
+Summary
+ReCTSi introduces an approach for the imputation of Correlated Time Series (CTS). ReCTSi presents a two-phase architecture aimed at efficient pattern learning. The first phase employs a multi-view learnable codebook to identify, archive, and swiftly retrieve common patterns across time series. The second phase, Transient Pattern Adaptation, leverages completeness-aware attention modules to prioritize complete, reliable data segments for imputation. Through testing, ReCTSi sets a new standard in imputation accuracy and reduces computational requirements.
+
+Strength
+The overall presentation flow is easy to follow, good and informative visualizations (fig 3, 4).
+The proposed ReCTSi framework yields better performance gap for CTS imputation task, while being efficient both in memory and time.
+Weakness
+The same notation of t in Eq.(4), (6) might cause confusion.
+In the design of completeness matrix, the authors assume the data segments containing missing values contribute less to pattern learning. I wonder if this assumption hold true in most cases. For both temporal or spatial dependence, the widely used assumption is that the closer neighbors should be more related to the data point of interest. How does ReCTSi handle those cases when completeness matrix reduces the weight of nearby neighborhood?
+What is the rationale of using Grouped Feedforward Network instead of ordinary Feedforward Network to make final inference?
+Questions:
+Please refer to weaknesses mentioned above.
+
+Ethics Review Flag: No
+Ethics Review Description: n/a
+Scope: 3: The work is somewhat relevant to the Research track of KDD and is of narrow interest to a sub-community
+Novelty: 5: Above Average
+Technical Quality: 5: Above Average
+Presentation Quality: 3: Excellent (it is a pleasure to read and easy to understand, it has good figures and insightful explanations)
+Reproducibility: 3: Excellent (it provides sufficient details, and the code and data are accessible)
+Reviewer Confidence: 3: The reviewer is confident but not certain that the evaluation is correct
+
+----------------------------------
 Thanks for your time and comments.
 
 $^\S$For detailed visualizations of CaA and experimental results, please refer to [this link](http://bit.ly/49ADwMX).
