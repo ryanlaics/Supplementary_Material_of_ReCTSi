@@ -1,3 +1,36 @@
+Review:
+This paper proposes a framework that adopts architecture decoupling and learnable codebook techniques for resource-efficient time-series imputation. The experimental results indicate a significant improvement in imputation accuracy while enjoying lower latency and model complexity.
+
+Strengths
+
+(+) The paper tackles important problems in real-world time-series data often having missing values.
+(+) The paper provides a strong experiment result substantiating the claims.
+(+) Each design choice (PPE & TPA+CaA) included in the framework is well-justified.
+Weaknesses
+
+(-) In general, the imputation task is considered as a preprocessing step in the entire pipeline. I am not sure about the necessity of making the imputation in resource-limited edge settings.
+(-) The paper mentions that TST patterns incur quadratic space and time complexity. However, it should be included if it can provide more imputation accuracy, considering the current runtime latency.
+(-) Lack of comparison with the recent diffusion models.
+(-) I am not sure how the imputation accuracy of the models changes with respect to the different missing rates.
+Questions:
+Q1. As mentioned above, because the imputation is usually run before downstream training and deployment, I am not certain that latency should be a big concern in this context. Therefore, comparing more recent diffusion models and incorporating the TST patterns should make the paper more solid.
+
+Q2. In addition, the paper argues the complexity of the TST patterns based on only the vanilla attention mechanism. However, there are many recent efficient attention mechanisms [a] for time series that can also be used in this framework.
+
+Q3. It would be better if the paper shows the experiment results comparing the imputation accuracy across different missing rates.
+
+[a] Wen, Qingsong, et al. "Transformers in time series: a survey." Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence. 2023.
+
+Ethics Review Flag: No
+Ethics Review Description: N/A
+Scope: 3: The work is somewhat relevant to the Research track of KDD and is of narrow interest to a sub-community
+Novelty: 5: Above Average
+Technical Quality: 5: Above Average
+Presentation Quality: 3: Excellent (it is a pleasure to read and easy to understand, it has good figures and insightful explanations)
+Reproducibility: 3: Excellent (it provides sufficient details, and the code and data are accessible)
+Reviewer Confidence: 3: The reviewer is confident but not certain that the evaluation is correct
+
+----------------------------------
 Thanks for your time and comments.
 
 $^\S$For detailed experimental results, please refer to [this link](http://bit.ly/49ADwMX).
