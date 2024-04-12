@@ -1,4 +1,4 @@
-We sincerely appreciate your positive assessment of our work.
+We sincerely appreciate your positive assessment.
 
 $\S$ For detailed experimental results, please refer to [this link](http://bit.ly/49ADwMX).
 ### R1 to Q1/W1/W2/W3 (Necessity of Edge Imputation & Studies on Diffusion and TST)：
