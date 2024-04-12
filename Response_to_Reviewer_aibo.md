@@ -1,3 +1,36 @@
+Review:
+The paper, titled “ReCTSi: Resource-efficient Correlated Time Series Imputation via Decoupled Pattern Learning and Completeness-aware Attentions,” discusses a method for imputing missing data in correlated time series (CTS) efficiently. The paper introduces ReCTSi, a method that significantly reduces computational resources for CTS imputation while maintaining high accuracy. ReCTSi employs a two-phase architecture: Persistent Pattern Extraction (PPE) and Transient Pattern Adaptation (TPA). PPE identifies common patterns across time series, while TPA focuses on adapting to the complete and reliable segments of data. The method includes a novel attention mechanism that prioritizes complete data segments during the imputation process, which is crucial for handling CTS data's dynamic and incomplete nature.
+
+Pros
+
+ReCTSi significantly reduces computational resources for time series imputation while maintaining high accuracy. This makes it suitable for resource-limited scenarios, such as edge computing.
+The two-phase architecture (Persistent Pattern Extraction and Transient Pattern Adaptation) allows ReCTSi to identify common patterns across time series and adapt to reliable data segments.
+The novel completeness-aware attention mechanism prioritizes complete data segments during imputation, which is crucial for handling dynamic and incomplete time series data.
+ReCTSi achieves state-of-the-art imputation accuracy with significantly fewer computational resources than existing models.
+Cons
+
+The model’s architecture involves multiple components (e.g., MvLC, PCF) and hyperparameters. Implementing and fine-tuning these components may require expertise.
+While ReCTSi performs well across various domains (traffic flow, air quality, COVID-19), its effectiveness may vary depending on the specific dataset characteristics.
+Balancing accuracy and resource efficiency is challenging. Some applications may prioritize accuracy over resource savings, and vice versa.
+Overall, ReCTSi offers an innovative approach to time series imputation, but its adoption should consider the trade-offs between accuracy, complexity, and resource constraints.
+
+Questions:
+For the COVID-19 dataset, the number of timestamps is rather small, so we expected the traditional non-DL methods (MEAN, MF, MICE) to be more accurate than DL-based methods, but the results show the opposite. How can we explain this phenomenon?
+Are there specific scenarios where traditional methods still outperform ReCTSi?
+While ReCTSi performs well across various domains(traffic, air quality, and infection), are there plans to extend ReCTSi to handle other types of time series data (e.g., financial data, sensors)? Can we guarantee that the ReCTSi still shows high accuracy compared to other methods?
+The attention mechanism in ReCTSi prioritizes complete data segments. Could you provide insights into how this mechanism works through visualizations and whether it can be further fine-tuned or customized for specific applications?
+How does it perform in scenarios with noisy or irregularly sampled data?
+ReCTSi involves multiple components (e.g., MvLC, PCF). How sensitive is the model’s performance to hyperparameter choices? Are there guidelines for practitioners to select optimal configurations?
+Ethics Review Flag: No
+Ethics Review Description: No issue
+Scope: 3: The work is somewhat relevant to the Research track of KDD and is of narrow interest to a sub-community
+Novelty: 4: Average
+Technical Quality: 3: Below Average
+Presentation Quality: 2: Average (it needs some effort to understand, but it should be ok after some editing)
+Reproducibility: 3: Excellent (it provides sufficient details, and the code and data are accessible)
+Reviewer Confidence: 3: The reviewer is confident but not certain that the evaluation is correct
+
+----------------------------------
 Thanks for your time and comments.
 
 $^\S$For detailed visualizations of CaA and experimental results, please refer to [this link](http://bit.ly/49ADwMX).
