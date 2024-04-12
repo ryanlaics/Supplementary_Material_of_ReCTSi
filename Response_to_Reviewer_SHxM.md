@@ -1,3 +1,35 @@
+Review:
+The work introduces a method for imputing correlated time series data through a two-phase architecture. The first phase, Persistent Pattern Extraction, employs a Multi-view Learnable Codebook to identify and archive common persistent patterns across different time series for quick retrieval during inference. The second phase, Transient Pattern Adaptation, uses completeness-aware attention modules to focus on complete and reliable data segments, capturing transient patterns influenced by data dynamics, drifts, or anomalies.
+
+Pros:
+
+1- Efficiency and Resource Conservation
+
+2- Enhanced Imputation Accuracy
+
+Cons:
+
+Potential Overfitting Risks and the Dependency on Data Quality
+
+Questions:
+1- Could you elaborate on how scalable the ReCTSi framework is when applied to datasets with a very large number of sensors or channels?
+
+2- Detailed sensitivity analysis for the framework hyperparameters is lacking. Could you provide insights into how the hyperparameters were optimized across different datasets?
+
+3- In the context of using a learnable codebook for pattern extraction, can you discuss the model's ability to capture long-term dependencies within the data?
+
+4- Would it be possible to include a detailed case study or example in your paper illustrating how ReCTSi captures and utilizes PT-patterns, PS-patterns, etc, in a practical scenario?
+
+Ethics Review Flag: No
+Ethics Review Description: no
+Scope: 4: The work is relevant to the Research track of KDD and is of broad interest to the community
+Novelty: 4: Average
+Technical Quality: 4: Average
+Presentation Quality: 2: Average (it needs some effort to understand, but it should be ok after some editing)
+Reproducibility: 3: Excellent (it provides sufficient details, and the code and data are accessible)
+Reviewer Confidence: 3: The reviewer is confident but not certain that the evaluation is correct
+
+----------------------------------
 Thanks for your time and comments.
 
 $^\S$For detailed clarification of patterns and experimental results, please refer to [this link](http://bit.ly/49ADwMX).
