@@ -10,7 +10,7 @@ Besides, through extensive experiments, we suggest limiting the CaA block number
 
 Based on these results, we recommend an embedding size comparable to the dataset's channel count for adequate expressiveness and suggest limiting CaA blocks to one or two. A larger initial codebook size is advisable, with PCF ensuring efficient compression. These practical guidelines for configuring ReCTSi will be included in the final version.
 
-*Due to strict text length limits, we recommend viewing our full response at this [link](https://bit.ly/4cXMCX1). We will post the remaining responses as "official comments" shortly.*
+*Due to the text length limit, we are unable to provide all five responses at once. We recommend viewing our full response at this [link](https://bit.ly/4cXMCX1), and we will post the remaining responses as "official comments" shortly.*
 
 ### Q3 (Ability to Capture Long-term Dependencies):
 ReCTSi's use of the learnable codebook mechanism in the TPA phase incorporates attention modules specifically chosen for their adeptness at capturing long-term dependencies. Inspired by the efficacy of transformer (i.e., self-attention mechanisms) in managing long-range dependencies within large language models, these modules ensure ReCTSi excels in identifying and leveraging complex temporal relationships over extended periods. This strategic integration of attention-based modules into ReCTSi highlights our commitment to utilizing advanced techniques for profound long-term pattern recognition in time series data.
