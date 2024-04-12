@@ -8,7 +8,7 @@ We deem that in scenarios with regular, periodic, or stationary data patterns, t
 ### Q3/W2 (Generalizability):
 Typically, adapting a learning-based model to a specific dataset is a fundamental step in achieving excellent performance. The theoretical guarantee of a model's effectiveness across all datasets, or even specific ones, is challenging. Nonetheless, we provide evidence that the trained ReCTSi performs admirably across diverse domains including traffic flow, air quality, and COVID-19, as shown in Tables 1 and 2 of our original submission. Additionally, we add the study of the impact of varying missing rates (15%, 25%, 35%, and 45%) $\S$, further validates its robustness across diverse data characteristics.
 
-*Due to the text length limit, we recommend viewing our full response at this [link](https://bit.ly/3JgzDSp). We will post the remaining responses as "official comments" shortly.*
+*Due to the text length limit, we are unable to provide all seven responses at once. We recommend viewing our full response at this [link](https://bit.ly/3JgzDSp), and we will post the remaining responses as "official comments" shortly.*
 ### Q4 (Visualizations of CaA):
 ReCTSi's attention mechanism employs Completeness Matrices to prioritize features' importances based on their completeness, effectively increasing the attention scores for segments with fewer missing values. This approach ensures the model focuses on the most informative parts of the data. To enhance understanding, we've introduced attention-score heatmaps that visually represent the distribution and adjustment of attention weights, highlighting the mechanism's ability to identify and prioritize complete data segments $\S$.
 
